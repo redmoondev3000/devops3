@@ -35,7 +35,7 @@ public class ProductApiController {
 	}
 	
 	@PostMapping("/insert")
-	public ResponseEntity<String> insertProduct(@RequestBody ProductDTO product) throws Exception {
+	public ResponseEntity<String> insertProduct(@ModelAttribute ProductDTO product) throws Exception {
 		productService.insertProduct(product);
 		return ResponseEntity.ok("insert success");
 	}
